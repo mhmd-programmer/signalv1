@@ -22,7 +22,7 @@ import Home from './views/Home.vue';
 import VIP from './views/VIP.vue';
 import Store from './views/Store.vue';
 import Archive from './views/Archive.vue';
-import Create from './views/Create.vue';
+import Panel from './views/Panel.vue';
 import Login from './views/Login.vue';
 import Settings from './views/Settings.vue';
 import HowWork from './views/HowWork.vue';
@@ -35,6 +35,7 @@ import Answer from './views/Answer.vue';
 import AllSupport from './views/AllSupport.vue';
 import Forget from './views/Forget.vue';
 import Bpanel from './views/Bpanel.vue';
+import Test from './views/Test.vue';
 
 const router = new VueRouter({
     mode: 'history',
@@ -47,11 +48,12 @@ const router = new VueRouter({
        { path: '/settings', component: Settings, name: 'settings' },
        { path: '/how-work', component: HowWork, name: 'howwork' },
        { path: '/support', component: Support, name: 'support' },
-       { path: '/panel/create', component: Create, name: 'create' },
+       { path: '/panel/create', component: Panel, name: 'create' },
        { path: '/mmd/test', components: Ahmad, name: 'google' },
        { path: '/Targets', component: Targets, name: 'Targets' },
        { path: '/supports', component: Supports, name: 'supports' },
        { path: '/bpanel', component: Bpanel, name: 'bpanel' },
+       { path: '/test', component: Test, name: 'test' },
        { path: '/forget-pass', component: Forget, name: 'forget' },
        { path: '/support/answer/:id', component: Answer, name: 'answer' },
        { path: '/store/confirms', components: StoreConfirm, name: 'confirm' },

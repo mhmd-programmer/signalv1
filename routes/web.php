@@ -39,6 +39,7 @@ Route::get('/fetch/binery', 'SignalController@getBinery');
 Route::post('change/status', 'SignalController@GoGo');
 Route::post('changes/status', 'SignalController@GoGoGo');
 Route::post('save/signal', 'SignalController@store');
+Route::post('save/signal/gold', 'GoldController@Gold');
 Route::post('save/binery', 'SignalController@Binery');
 Route::get('telegram/post', 'HomeController@Telegram');
 Route::get('send/all/email', 'HomeController@QueueMail');

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSignalsTable extends Migration
+class CreateGoldTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,17 @@ class CreateSignalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('signals', function (Blueprint $table) {
+        Schema::create('gold', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            // $table->string('pip');
-            // $table->string('pips');
-            // $table->string('symbol');
+            $table->string('status');
             $table->string('price');
             $table->string('stop');
             $table->string('profit');
-            $table->string('status');
             $table->integer('year');
             $table->integer('month');
             $table->integer('day');
             $table->string('city');
             $table->string('time');
-            $table->integer('number');
             $table->string('info');
             $table->timestamps();
         });
@@ -41,6 +36,6 @@ class CreateSignalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('signals');
+        Schema::dropIfExists('gold');
     }
 }
