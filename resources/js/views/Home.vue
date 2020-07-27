@@ -264,7 +264,7 @@ import moment from 'moment';
 export default {
     data() {
         return {
-			signals: [],
+			      signals: [],
             signal: '',
         }
 	},

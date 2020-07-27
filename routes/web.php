@@ -47,7 +47,7 @@ Route::get('/time', function(){
     return \Carbon\Carbon::parse('2020-04-20 22:32:58')->timezone('Asia/Tehran')->format('Y/m');
 });
 Route::post('save/support', 'HomeController@Support');
-Route::get('fetch/signal/free', 'SignalController@SignalFree');
+Route::get('fetch/signal/{id}', 'SignalController@SignalFree');
 Route::get('fetch/signal/silver', 'SignalController@SignalSilver');
 Route::get('start/date', 'HomeController@start');
 Route::get('end/start', 'HomeController@endStart');
@@ -55,7 +55,7 @@ Route::get('fetch/signal/gold', 'SignalController@SignalGold');
 Route::get('fetch/signal/diamond', 'SignalController@SignalDiamond');
 Route::get('fetch/date/{id}/{slug}/{token}', 'HomeController@Date');
 Route::get('fetch/rate/user', 'SignalController@Rate');
-Route::get('filter/signal/{year}/{month}/{day}', 'SignalController@Filter');
+Route::get('filter/signal', 'SignalController@Filter');
 Route::get('fetch/user/data/{id}/{token}', 'HomeController@Auth');
 Route::post('change/password', 'HomeController@ChangePass');
 Route::post('change/name/email', 'HomeController@Change');

@@ -21,28 +21,13 @@ class SignalController extends Controller
         ]));
     }
 
-    public function Filter(Signal $signal, $year, $month, $day){
-        return $signal->where(['year' => $year , 'month' => $month , 'day' => $day])->get();
+    public function Filter(Signal $signal){
+        return $signal->latest()->get();
     }
 
-    public function SignalFree(Signal $signal)
+    public function SignalFree(Signal $signal, $id)
     {
-        $a = $signal->where('number', 1)->first();
-        $b = $signal->where('number', 2)->first();
-        $c = $signal->where('number', 3)->first();
-        $d = $signal->where('number', 4)->first();
-        $e = $signal->where('number', 5)->first();
-        $f = $signal->where('number', 6)->first();
-        $g = $signal->where('number', 7)->first();
-        $h = $signal->where('number', 8)->first();
-        $i = $signal->where('number', 9)->first();
-        $j = $signal->where('number', 10)->first();
-        $k = $signal->where('number', 11)->first();
-        $l = $signal->where('number', 12)->first();
-        $m = $signal->where('number', 13)->first();
-        $n = $signal->where('number', 14)->first();
-        $o = $signal->where('number', 15)->first();
-        return ['a' => $a, 'b' => $b, 'c' => $c, 'd' => $d, 'e' => $e, 'f' => $f, 'g' => $g, 'h' => $h, 'i' => $i, 'j' => $j, 'k' => $k, 'l' => $l, 'm' => $m, 'n' => $n, 'o' => $o, ];
+        return $signal->where('id', $id)->first();
     }
     public function SignalSilver(Signal $signal)
     {
