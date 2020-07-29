@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Binery extends Model
 {
-    protected $fillable = ['name', 'pips', 'number', 'time', 'hour', 'date', 'status'];
+    protected $fillable = ['name', 'time', 'hour', 'date', 'status'];
 }

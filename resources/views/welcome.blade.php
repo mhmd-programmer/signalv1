@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Signal Bedam??</title>
     <style>
-        
-        
-        
+
+
+
         .loading {
             position: fixed;
             left: 50%;
@@ -23,7 +23,7 @@
             background: transparent;
             overflow: hidden;
         }
-    
+
         .line-1 {
         height: 98vh;
     fill: none;
@@ -53,7 +53,7 @@
       100% {stroke-dashoffset: 0;}
     }
     @keyframes anim{
-        
+
             0%{ fill-opacity:.1;}
             100%{ fill-opacity:1;}
         }
@@ -67,7 +67,7 @@
     <link rel="manifest" href="{{asset('manifest.json')}}">
 
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    
+
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('Icons/fontawesome-pro-5.12.0-web-ulabs/css/all.min.css')}}">
     {{-- <link rel="stylesheet" href="{{asset('FX/style1.css')}}"> --}}
@@ -100,18 +100,18 @@
     <script src="{{asset('bitcoin/rsbp.js')}}"></script>
     <script src="{{asset('FX/script1.js')}}"></script>
 <script src="{{asset('FX/script2.js')}}"></script>
-    
+
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 
-    
-    
+
+
 
 </head>
 <body style="font-family: IRANSansWeb;background:#0f0f17">
 
-    
+
     <div class="loading">
         <div>
         <div class="ll">
@@ -186,7 +186,7 @@
 
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-                
+
                 <script id="rendered-js">
                 "use strict";
                 //# sourceURL=pen.js

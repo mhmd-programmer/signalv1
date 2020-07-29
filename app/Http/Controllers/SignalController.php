@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Gold;
 use Illuminate\Http\Request;
 use App\Signal;
 use App\Binery;
@@ -35,12 +36,7 @@ class SignalController extends Controller
             return $signal->latest()->take(3)->get();
         }
     }
-    public function SignalGold(Signal $signal)
-    {
-        if(auth()->user()->rate == 'gold'){
-            return $signal->latest()->take(7)->get();
-        }
-    }
+
     public function SignalDiamond(Signal $signal)
     {
         if(auth()->user()->rate == 'diomond'){

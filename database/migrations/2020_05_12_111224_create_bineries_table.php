@@ -16,10 +16,8 @@ class CreateBineriesTable extends Migration
         Schema::create('bineries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('pips');
-            $table->string('number');
             $table->integer('time');
-            $table->text('hour');
+            $table->string('hour');
             $table->string('date');
             $table->string('status');
             $table->timestamps();

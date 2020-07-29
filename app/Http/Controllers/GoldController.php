@@ -18,4 +18,14 @@ class GoldController extends Controller
             'status' => 'ready',
         ]));
     }
+
+    public function filter(Gold $gold, $id)
+    {
+        return $gold->where('id', $id)->first();
+    }
+
+    public function GoldBox(Gold $gold)
+    {
+        return $gold->latest()->get();
+    }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 // require 'vendor/autoload.php';
+use App\Events\BroadEvent;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use App\Jobs\SendMail;
@@ -47,9 +48,11 @@ class HomeController extends Controller
      */
 
 
-    public function welcome(Status $status) {
+    public function welcome() {
+//        $user = $user->find(1);
+//        event(new BroadEvent($user));
         return view('welcome');
-    //  auth()->loginUsingId(3);
+//      auth()->loginUsingId(3);
     //  Auth::logout();
     // $user = User::where('id', 1)->first();
     // Auth::login($user, true);

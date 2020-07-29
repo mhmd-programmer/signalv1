@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuetify from 'vuetify';
+import Echo from 'laravel-echo'
 import Swal from "sweetalert2";
 import "vuetify/dist/vuetify.min.css";
 import VueApexCharts from 'vue-apexcharts'
 import moment from 'moment';
-// import Chart from 'chart.js';
+
+window.Pusher = require('pusher-js');
+require('./bootstrap');
+
 
 
 
@@ -69,8 +73,16 @@ const router = new VueRouter({
         }
     }*/
 });
+
 const app = new Vue({
     el: '#app',
     components: { App },
     router,
 });
+
+// window.Echo.channel('User.id')
+//     .listen('ArticleEvent' , function (e) {
+//         console.log(e);
+//         console.log(e.name)
+//     });
+
